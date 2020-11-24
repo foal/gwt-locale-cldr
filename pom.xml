@@ -142,6 +142,6 @@
 	<properties>
 		<gwt-slf4j.ver>1.0.0</gwt-slf4j.ver>
 		<time.apt.ver>2.0.4-SNAPSHOT</time.apt.ver>
-		<gwt-locale.ver>1.0.0-SNAPSHOT</gwt-locale.ver>
+		<gwt-locale.ver>1.0.1-SNAPSHOT</gwt-locale.ver>
 	</properties>
 </project>
