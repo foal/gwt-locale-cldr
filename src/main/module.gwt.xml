@@ -1,3 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
+	<entry-point class="org.jresearch.gwt.locale.cldr.client.CldrEntryPoint" />
 </module>
