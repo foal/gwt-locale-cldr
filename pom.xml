@@ -32,6 +32,7 @@
 				<configuration>
 					<!-- <source>13</source>
 					<target>13</target> -->
+					<showWarnings>true</showWarnings>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.jresearch.gwt.time</groupId>
