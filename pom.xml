@@ -20,8 +20,8 @@
 		<tag>HEAD</tag>
 	</scm>
 	<properties>
-		<time.apt.ver>2.0.4</time.apt.ver>
-		<gwt-locale.ver>1.0.2</gwt-locale.ver>
+		<time.apt.ver>2.0.5-SNAPSHOT</time.apt.ver>
+		<gwt-locale.ver>1.0.3-SNAPSHOT</gwt-locale.ver>
 	</properties>
 	<build>
 		<!-- define build -->
