@@ -22,7 +22,75 @@
 	<properties>
 		<time.apt.ver>2.0.5-SNAPSHOT</time.apt.ver>
 		<gwt-locale.ver>1.0.3-SNAPSHOT</gwt-locale.ver>
+		<gwt-slf4j.ver>1.0.2</gwt-slf4j.ver>
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jresearch.gwt.locale</groupId>
+				<artifactId>org.jresearch.gwt.locale</artifactId>
+				<version>${gwt-locale.ver}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jresearch.gwt.time</groupId>
+				<artifactId>org.jresearch.gwt.time.apt.annotation</artifactId>
+				<version>${time.apt.ver}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.dominokit</groupId>
+				<artifactId>domino-slf4j-logger</artifactId>
+				<version>${gwt-slf4j.ver}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.jresearch.gwt.locale</groupId>
+			<artifactId>org.jresearch.gwt.locale</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jresearch.gwt.time</groupId>
+			<artifactId>org.jresearch.gwt.time.apt.annotation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.dominokit</groupId>
+			<artifactId>domino-slf4j-logger</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty.websocket</groupId>
+			<artifactId>websocket-client</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 	<build>
 		<!-- define build -->
 		<plugins>
@@ -32,7 +100,7 @@
 				<configuration>
 					<source>8</source>
 					<target>8</target>
-					<showWarnings>true</showWarnings>
+					<!-- <showWarnings>true</showWarnings> -->
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.jresearch.gwt.time</groupId>
@@ -55,6 +123,7 @@
 				<groupId>net.ltgt.gwt.maven</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
 				<configuration>
+					<!-- <logLevel>DEBUG</logLevel> -->
 					<moduleName>org.jresearch.gwt.locale.cldr.module</moduleName>
 					<moduleShortName>gwtCldrLocales</moduleShortName>
 				</configuration>
@@ -63,56 +132,4 @@
 	</build>
 
 	<!-- ==================================================================== -->
-	<dependencies>
-		<dependency>
-			<groupId>org.jresearch.gwt.locale</groupId>
-			<artifactId>org.jresearch.gwt.locale</artifactId>
-			<version>${gwt-locale.ver}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jresearch.gwt.time</groupId>
-			<artifactId>org.jresearch.gwt.time.apt.annotation</artifactId>
-			<version>${time.apt.ver}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.gwt</groupId>
-			<artifactId>gwt-user</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.gwt</groupId>
-			<artifactId>gwt-dev</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty.websocket</groupId>
-			<artifactId>websocket-client</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.dominokit</groupId>
-			<artifactId>domino-slf4j-logger</artifactId>
-			<version>1.0.1</version>
-		</dependency>
-	</dependencies>
 </project>
