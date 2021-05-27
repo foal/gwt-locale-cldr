@@ -2,6 +2,7 @@ package org.jresearch.gwt.locale.cldr.client;
 
 import java.util.Locale;
 
+import org.jresearch.gwt.time.apt.data.client.LocaleInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
