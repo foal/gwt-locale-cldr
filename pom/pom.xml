@@ -20,7 +20,7 @@
     </scm>
 	<properties>
         <java.version>11</java.version>
-		<time.apt.ver>2.0.14</time.apt.ver>
+		<time.apt.ver>2.0.15</time.apt.ver>
 		<gwt-locale.ver>1.0.5</gwt-locale.ver>
 		<gwt-slf4j.ver>1.0.2</gwt-slf4j.ver>
 	</properties>
