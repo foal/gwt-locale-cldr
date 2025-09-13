@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.jresearch</groupId>
 		<artifactId>org.jresearch.pom</artifactId>
-		<version>29-SNAPSHOT</version>
+		<version>31</version>
 	</parent>
 	<groupId>org.jresearch.gwt.locale</groupId>
 	<artifactId>org.jresearch.gwt.locale.cldr</artifactId>
@@ -19,10 +19,15 @@
         <tag>HEAD</tag>
     </scm>
 	<properties>
+		<jetty-version>9.2.14.v20151106</jetty-version>
+		<logback-version>1.2.13</logback-version>
+		<junit-version>4.13.2</junit-version>
+		<slf4j-version>1.7.36</slf4j-version>
         <java.version>11</java.version>
-		<time.apt.ver>2.0.15</time.apt.ver>
+		<time.apt.ver>2.0.17</time.apt.ver>
 		<gwt-locale.ver>1.0.5</gwt-locale.ver>
-		<gwt-slf4j.ver>1.0.2</gwt-slf4j.ver>
+		<gwt-slf4j.ver>1.0.4</gwt-slf4j.ver>
+        <gwt-version>2.8.2</gwt-version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -41,6 +46,22 @@
 				<artifactId>domino-slf4j-logger</artifactId>
 				<version>${gwt-slf4j.ver}</version>
 			</dependency>
+            <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt-user</artifactId>
+                <version>${gwt-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt-dev</artifactId>
+                <version>${gwt-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-logging</artifactId>
+                        <groupId>commons-logging</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
@@ -69,25 +90,30 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j-version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
+			<version>${logback-version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty.websocket</groupId>
 			<artifactId>websocket-client</artifactId>
+			<version>${jetty-version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
