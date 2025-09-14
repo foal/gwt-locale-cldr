@@ -11,12 +11,12 @@
 	<packaging>gwt-lib</packaging>
 	<name>JRS: GWT CLDR data provider for JRE locale emulation</name>
 	<description>JRS: GWT data provider for JRE locale emulation based on CLDR data</description>
-	<version>1.0.8</version>
+	<version>1.0.9-SNAPSHOT</version>
 	<url>https://github.com/foal/gwt-locale-cldr</url>
     <scm>
         <developerConnection>scm:git:https://github.com/foal/gwt-locale-cldr.git</developerConnection>
         <url>https://github.com/foal/gwt-locale-cldr</url>
-        <tag>v1.0.8</tag>
+        <tag>HEAD</tag>
     </scm>
 	<properties>
 		<jetty-version>9.2.14.v20151106</jetty-version>
