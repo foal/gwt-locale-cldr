@@ -27,7 +27,7 @@
 		<time.apt.ver>2.0.17</time.apt.ver>
 		<gwt-locale.ver>1.0.5</gwt-locale.ver>
 		<gwt-slf4j.ver>1.0.4</gwt-slf4j.ver>
-        <gwt-version>2.8.2</gwt-version>
+        <gwt-version>2.9.0</gwt-version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
